@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  headerText = 'Создание своего пайпа.';
-  num = 2;
+  headerText = 'Фильтрация данных с помощью пайпа.';
+
 
 }

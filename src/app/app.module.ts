@@ -15,14 +15,11 @@ import {AppComponent} from './app.component';
 
 
 // Pipes
-import {PowPipe} from './pow.pipe';
-import { MyTestPipe } from './my-test.pipe';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PowPipe,
-    MyTestPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
