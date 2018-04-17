@@ -9,16 +9,20 @@ import {AppComponent} from './app.component';
 
 
 // Directives
-import {BgDirective} from './Directives/bg.directive';
 
 
 // Services
 
 
+// Pipes
+import {PowPipe} from './pow.pipe';
+import { MyTestPipe } from './my-test.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    BgDirective
+    PowPipe,
+    MyTestPipe
   ],
   imports: [
     BrowserModule,

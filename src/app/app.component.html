@@ -2,40 +2,9 @@
   <h2 style="margin-top: 15px; text-align: center;">{{ headerText }}</h2>
   <hr>
 
-  <h3>Строковые пайпы</h3>
-  <p>{{ name }}</p>
-  <p>{{ name | lowercase }} <b> - (lowercase)</b></p>
-  <p>{{ name | uppercase }} <b> - (uppercase)</b></p>
-  <p>{{ name | slice:0:2 | lowercase }} <b> - (slice:0:2 | lowercase)</b></p> <!-- с 0 индекса, 2 элемента -->
-  <hr>
-
-  <h3>Числовые пайпы</h3>
-  <p>{{ pi }}</p>
-  <p>{{ pi | number }} <b> - (number)</b></p> <!-- default -  -->
-  <p>{{ pi | number:'1.3-4' }} <b> - (number:'1.3-4')</b></p> <!-- 1-сколько чисел в начале, 3-4-от трёх до 4х цыфер после точки -->
-  <p>{{ pi | number:'2.2-2' }} <b> - (number:'2.2-2')</b></p>
-  <hr>
-
-  <h3>Валютные пайпы</h3>
-  <p>{{ money | currency:'USD' }} <b> - (currency:'USD')</b></p> <!-- по-умолчанию второй параметр = true -->
-  <p>{{ money | currency:'USD':false }} <b> - (currency:'USD':false)</b></p>
-  <hr>
-
-  <h3>Пайпы для даты</h3>
-  <p>{{ date }}</p>
-  <p>{{ date | date }} <b> - (date - default - :'mediumDate')</b></p> <!-- default - :'mediumDate' -->
-  <p>{{ date | date:'fullDate' }}<b> - (date:'fullDate')</b></p>
-  <p>{{ date | date:'shortDate' }}<b> - (date:'shortDate')</b></p>
-  <p>{{ date | date:'shortTime' }}<b> - (date:'shortTime')</b></p>
-  <a href="https://angular.io/api/common/DatePipe">Здесь есть все варианты пайпов даты</a>
-  <hr>
-
-  <h3>Пайпы для преобразования в проценты</h3>
-  <p>{{ amount }}</p>
-  <p>{{ amount | percent }}<b> - (percent)</b></p>
-  <hr>
-
-  <h3>Пайпы для дебаггинга</h3>
-  <p>{{ object }}</p>
-  <div><pre>{{ object | json }}</pre><b> - (json, для красоты обернуть в тэг - <i>pre</i>)</b></div>
+  <h3>Мой пайп, возводящий в степень</h3>
+  <p>{{ num }}</p>
+  <p>{{ num | appPow }} - (appPow)</p>
+  <p>{{ num | appPow:3 }} - (appPow:3)</p>
+  <p>{{ num | appPow:3:'=' }} - (appPow:3:'=')</p>
 </div>
