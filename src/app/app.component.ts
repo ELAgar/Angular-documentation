@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  headerText = 'Пайпы.';
+  name = 'Elvin';
+  pi = Math.PI;
+  money =  350;
+  date = new Date();
+  amount = 0.45;
+  object = {
+    foo: 'bar',
+    baz: 'qux',
+    nested:
+      {
+        xyz: 3,
+        numbers: [1, 2, 3]
+      }
+  };
+
+
 }
