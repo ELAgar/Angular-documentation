@@ -18,4 +18,11 @@ export class AppComponent {
     {name: 'BMW', description: 'WFM 6'}
   ];
 
+  addCar() {
+    this.cars.push({
+      name: 'New Car',
+      description: 'WFM'
+    });
+  }
+
 }
