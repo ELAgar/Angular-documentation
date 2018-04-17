@@ -2,18 +2,10 @@
   <h2 style="margin-top: 15px; text-align: center;">
     {{ headerText }}
   </h2>
-  <h3>{{ asyncTitle | async }}</h3>
   <hr>
 
-  <input type="text" style="width: 100%; padding: 5px 10px" [(ngModel)]="searchCar">
-  <button class="btn" (click)="addCar()">Добавить</button>
-  <hr>
-  <ul>
-    <li
-      class="item-group"
-      *ngFor="let car of cars | carFilter:searchCar:'name'; let i = index"
-    >
-      <p><b>{{ i + 1 }}</b>) Name: {{ car.name }}, <i>{{ car.description }}</i></p>
-    </li>
-  </ul>
+  <app-car-add></app-car-add>
+  <div class="item-group" *ngFor="let car of cars">
+    <app-car [car]="car"></app-car>
+  </div>
 </div>

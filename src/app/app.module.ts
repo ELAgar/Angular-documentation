@@ -6,29 +6,33 @@ import {HttpModule} from '@angular/http';
 
 // Components
 import {AppComponent} from './app.component';
+import {CarComponent} from './car/car.component';
+import {CarAddComponent} from './car-add/car-add.component';
 
 
 // Directives
 
 
 // Services
+import {ConsoleService} from './console.service';
+import {CarsService} from './cars.service';
 
 
 // Pipes
-import {CarFilterPipe} from './car-filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarFilterPipe
+    CarComponent,
+    CarAddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ConsoleService, CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

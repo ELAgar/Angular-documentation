@@ -36,7 +36,6 @@ hr {
 
 
 .item-group {
-  padding: 10px;
   border: 1px solid #dcdcdc;
   border-bottom: none;
 }
@@ -45,11 +44,18 @@ hr {
 }
 
 
-pre {
-  background: #f2f2f2;
-  border: 1px solid #d2d2d2;
-  border-radius: 5px;
+.success.item {
+  background: rgba(0, 128, 0, 0.30);
+  color: #006a00;
+}
+
+.danger.item {
+  background: rgba(255, 0, 0, 0.30);
+  color: #c90000;
+}
+
+.item {
   padding: 10px;
-  font-size: 15px;
-  margin: 5px 0;
+  font-size: 23px;
+  background: #fff;
 }
