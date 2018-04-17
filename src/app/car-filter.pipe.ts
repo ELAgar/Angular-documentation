@@ -2,7 +2,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'carFilter',
-  pure: false // по-умолчанию: true, если false - то используется для динамического использования фильтра, использовать очень аккуратно, задействует больше вызовов
+  pure: true // по-умолчанию: true, если false - то используется для динамического использования фильтра, использовать очень аккуратно, задействует больше вызовов
 })
 export class CarFilterPipe implements PipeTransform {
 

@@ -2,6 +2,7 @@
   <h2 style="margin-top: 15px; text-align: center;">
     {{ headerText }}
   </h2>
+  <h3>{{ asyncTitle | async }}</h3>
   <hr>
 
   <input type="text" style="width: 100%; padding: 5px 10px" [(ngModel)]="searchCar">
