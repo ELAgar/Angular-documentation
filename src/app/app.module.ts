@@ -15,11 +15,13 @@ import {AppComponent} from './app.component';
 
 
 // Pipes
+import {CarFilterPipe} from './car-filter.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarFilterPipe
   ],
   imports: [
     BrowserModule,

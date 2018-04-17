@@ -4,5 +4,14 @@
   </h2>
   <hr>
 
-
+  <input type="text" style="width: 100%; padding: 5px 10px" [(ngModel)]="searchCar">
+  <hr>
+  <ul>
+    <li
+      class="item-group"
+      *ngFor="let car of cars | carFilter:searchCar:'name'; let i = index"
+    >
+      <p><b>{{ i + 1 }}</b>) Name: {{ car.name }}, <i>{{ car.description }}</i></p>
+    </li>
+  </ul>
 </div>
