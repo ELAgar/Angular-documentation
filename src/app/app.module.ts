@@ -6,16 +6,12 @@ import {HttpModule} from '@angular/http';
 
 // Components
 import {AppComponent} from './app.component';
-import {CarComponent} from './car/car.component';
-import {CarAddComponent} from './car-add/car-add.component';
 
 
 // Directives
 
 
 // Services
-import {ConsoleService} from './console.service';
-import {CarsService} from './cars.service';
 
 
 // Pipes
@@ -23,16 +19,14 @@ import {CarsService} from './cars.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarComponent,
-    CarAddComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [ConsoleService, CarsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
