@@ -18,6 +18,9 @@ export class AppComponent implements OnInit {
     text: 'нет'
   }];
 
+  defaultAnswer = 'no';
+  defaultCountry = 'ua';
+
   constructor() {
   }
 

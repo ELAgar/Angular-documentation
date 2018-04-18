@@ -38,7 +38,7 @@ hr {
 
 .wrap-indicator-forms {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: -5%;
   width: 110%;
   text-align: center;
@@ -53,7 +53,7 @@ hr {
   color: rgba(255,0,0,.75);
 }
 .form-indicator.valid {
-  color: rgba(0, 192, 0, 0.81);
+  color: rgba(0,255,0,.70);
 }
 
 
