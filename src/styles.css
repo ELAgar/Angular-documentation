@@ -36,7 +36,6 @@ hr {
 
 
 
-
 .btn {
   border: 1px solid #d5d5d5;
   padding: 10px 20px;
@@ -47,6 +46,12 @@ hr {
 }
 .btn:hover {
   background: #f5f5f5;
+}
+.btn.btn-success[disabled] {
+  background: rgba(0, 207, 0, 0.30);
+  cursor: not-allowed;
+  border: 1px solid rgba(0, 128, 0, 0.70);
+
 }
 
 .btn.btn-success {
@@ -117,4 +122,14 @@ hr {
   display: inline-block;
   margin-left: 20px;
   margin-bottom: 10px;
+}
+
+
+
+
+input.ng-invalid.ng-touched {
+  border: 1px solid rgba(255, 0, 0, 0.5) !important;
+}
+input.ng-valid.ng-touched {
+  border: 1px solid rgba(34, 164, 10, 0.77) !important;
 }
