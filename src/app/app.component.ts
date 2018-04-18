@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
 
   submitForm(form: NgForm) {
-    console.log(form.value);
+    console.log(form);
   }
 
 }

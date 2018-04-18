@@ -20,7 +20,9 @@
         name="email"
         required
         email
+        #email="ngModel"
       >
+      <p class="error-text" *ngIf="email.invalid && email.touched">Введите корректный e-mail</p>
     </div>
     <div class="form-group">
       <input
@@ -30,7 +32,9 @@
         ngModel
         name="password"
         required
+        #password="ngModel"
       >
+      <p class="error-text" *ngIf="password.value.length < 6 && password.touched">Пароль должен содержать больше 6 символов! осталось: {{ 6 - password.value.length }}</p>
     </div>
     <div class="form-group">
       <select
@@ -60,7 +64,15 @@
         class="btn btn-success"
         type="submit"
         [disabled]="!form.valid"
-      >Сохранить</button>
+      >Сохранить
+        <div class="wrap-indicator-forms">
+        <span
+          class="form-indicator invalid"
+          *ngIf="form.invalid; else validForm"
+        ><sub>Форма не валидна</sub></span>
+          <ng-template #validForm><span class="form-indicator valid"><sub>Форма валидна</sub></span></ng-template>
+        </div>
+      </button>
     </div>
 
   </form>

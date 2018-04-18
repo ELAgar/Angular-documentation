@@ -26,6 +26,35 @@ hr {
   padding: 0 15px;
 }
 
+.error-text {
+  color: rgba(255, 0, 0, 0.75);
+  text-align: center;
+}
+
+
+.btn {
+  position: relative;
+}
+
+.wrap-indicator-forms {
+  position: absolute;
+  bottom: -20px;
+  left: -5%;
+  width: 110%;
+  text-align: center;
+}
+
+.form-indicator {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+}
+.form-indicator.invalid {
+  color: rgba(255,0,0,.75);
+}
+.form-indicator.valid {
+  color: rgba(0, 192, 0, 0.81);
+}
 
 
 
