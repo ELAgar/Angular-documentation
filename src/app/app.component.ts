@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
         email: new FormControl('', [
           Validators.email,
           Validators.required
-        ]),
+        ], this.checkForEmail),
         password: new FormControl('', [
           Validators.required,
           this.chekForlength.bind(this) // bind(this) задаёт область видимости нашего класса
@@ -48,6 +48,20 @@ export class AppComponent implements OnInit {
       };
     }
     return null;
+  }
+
+  checkForEmail(control: FormControl): Promise<any> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (control.value === 'test@mail.ru') {
+          resolve({
+            'emailIsUsed': true
+          });
+        } else {
+          resolve(null);
+        }
+      }, 2500);
+    });
   }
 
   onSubmit() {
