@@ -29,6 +29,7 @@ hr {
 .error-text {
   color: rgba(255, 0, 0, 0.75);
   text-align: center;
+  margin-top: 5px;
 }
 
 pre {
@@ -58,7 +59,7 @@ pre {
 }
 
 .form-indicator.invalid {
-  color: rgba(255, 0, 0, .75);
+  color: rgba(198, 0, 0, 0.75);
 }
 
 .form-indicator.valid {
@@ -123,7 +124,7 @@ pre {
   padding: 10px 15px;
   border: 1px solid silver;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .success.item {

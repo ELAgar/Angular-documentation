@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {validate} from 'codelyzer/walkerFactory/walkerFn';
 
 @Component({
   selector: 'app-root',
@@ -24,15 +25,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
-      country: new FormControl('ua'),
-      answer: new FormControl('yes')
+      email: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl('', Validators.required),
+      country: new FormControl('ua', Validators.required),
+      answer: new FormControl('yes', Validators.required)
     });
   }
 
   onSubmit() {
-    console.log('Submitted!', this.form);
+    console.log('Valid: ' + this.form.valid);
+    console.log(this.form.value);
   }
 
 }

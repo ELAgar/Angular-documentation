@@ -14,6 +14,7 @@
         placeholder="Введите Ваш e-mail"
         formControlName="email"
       >
+      <p class="error-text" *ngIf="form.get('email').invalid && form.get('email').touched">Email введён не корректно!</p>
     </div>
     <div class="form-group">
       <input
@@ -22,6 +23,7 @@
         placeholder="Введите Ваш пароль"
         formControlName="password"
       >
+      <p class="error-text" *ngIf="form.get('password').invalid && form.get('password').touched">Пароль не должен быть пустым!</p>
     </div>
     <div class="form-group">
       <select
@@ -44,7 +46,11 @@
       </label>
     </div>
     <div>
-      <button class="btn btn-success" type="submit">Сохранить</button>
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="form.invalid"
+      >Сохранить</button>
     </div>
 
   </form>
