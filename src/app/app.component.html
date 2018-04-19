@@ -5,46 +5,28 @@
   <hr>
 
 
-  <form
-    id="form"
-    #form="ngForm"
-    (ngSubmit)="submitForm()"
-  >
-    <div ngModelGroup="user" #user="ngModelGroup">
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Введите Ваш e-mail"
-          ngModel
-          name="email"
-          required
-          email
-          #email="ngModel"
-        >
-        <p class="error-text" *ngIf="email.invalid && email.touched">Введите корректный e-mail</p>
-        <button class="btn" type="button" (click)="addRandEmail()">Добавить случайный e-mail</button>
-      </div>
-      <div class="form-group">
-        <input
-          type="password"
-          class="form-control"
-          placeholder="Введите Ваш пароль"
-          ngModel
-          name="password"
-          required
-          #password="ngModel"
-        >
-        <p class="error-text" *ngIf="password.invalid && password.touched">Это поле не должн быть пустым!</p>
-      </div>
-      <p *ngIf="user.invalid && user.touched">Данные пользователя введены не корректно</p>
+  <form id="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Введите Ваш e-mail"
+        formControlName="email"
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Введите Ваш пароль"
+        formControlName="password"
+      >
     </div>
     <div class="form-group">
       <select
         class="form-control"
-        [ngModel]="defaultCountry"
-        name="country"
-        required
+        formControlName="country"
       >
         <option value="ru">Россия</option>
         <option value="by">Белоруссия</option>
@@ -56,36 +38,14 @@
         <input
           type="radio"
           [value]="ans.type"
-          [ngModel]="defaultAnswer"
+          formControlName="answer"
           name="answer"
-          required
         > {{ans.text}}
       </label>
     </div>
     <div>
-      <button
-        class="btn btn-success"
-        type="submit"
-        [disabled]="!form.valid"
-      >Сохранить
-        <div class="wrap-indicator-forms">
-        <span
-          class="form-indicator invalid"
-          *ngIf="form.invalid; else validForm"
-        ><sub>Форма не валидна</sub></span>
-          <ng-template #validForm><span class="form-indicator valid"><sub>Форма валидна</sub></span></ng-template>
-        </div>
-      </button>
+      <button class="btn btn-success" type="submit">Сохранить</button>
     </div>
 
   </form>
-
-  <div style="margin: 0 auto; width: 500px;" *ngIf="isSubmitted">
-    <div style="margin-bottom: 20px;" *ngFor="let formItem of formData">
-      <p><b>Ваш Email</b> - {{ formItem.user.email }}</p>
-      <p><b>Ваш пароль</b> - {{ formItem.user.password }}</p>
-      <p><b>Выбранная страна</b> - {{ formItem.country | uppercase }}</p>
-      <p><b>Ваш ответ</b> - {{ formItem.answer | uppercase }}</p>
-    </div>
-  </div>
 </div>

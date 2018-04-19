@@ -39,7 +39,6 @@ pre {
   background: #efefef;
 }
 
-
 .btn {
   position: relative;
 }
@@ -57,22 +56,20 @@ pre {
   font-style: italic;
   font-weight: bold;
 }
+
 .form-indicator.invalid {
-  color: rgba(255,0,0,.75);
+  color: rgba(255, 0, 0, .75);
 }
+
 .form-indicator.valid {
-  color: rgba(0,255,0,.70);
+  color: rgba(0, 255, 0, .70);
 }
-
-
 
 #form {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 60px;
 }
-
-
 
 .btn {
   border: 1px solid #d5d5d5;
@@ -82,9 +79,11 @@ pre {
   cursor: pointer;
   outline: none;
 }
+
 .btn:hover {
   background: #f5f5f5;
 }
+
 .btn.btn-success[disabled] {
   background: rgba(0, 207, 0, 0.30);
   cursor: not-allowed;
@@ -97,23 +96,19 @@ pre {
   border: 1px solid green;
 }
 
-
-
-
 .item-group {
   border: 1px solid #dcdcdc;
   border-bottom: none;
 }
+
 .item-group:last-child {
   border: 1px solid #dcdcdc;
 }
 
-
-
-
 .form-group {
   margin-bottom: 15px;
 }
+
 .form-group input {
   display: block;
   width: 100%;
@@ -121,9 +116,6 @@ pre {
   border: 1px solid silver;
   padding: 10px 15px;
 }
-
-
-
 
 .form-control {
   display: block;
@@ -133,9 +125,6 @@ pre {
   border-radius: 5px;
   margin-bottom: 10px;
 }
-
-
-
 
 .success.item {
   background: rgba(0, 128, 0, 0.30);
@@ -153,21 +142,16 @@ pre {
   background: #fff;
 }
 
-
-
-
 .radio {
   display: inline-block;
   margin-left: 20px;
   margin-bottom: 10px;
 }
 
-
-
-
 input.ng-invalid.ng-touched {
   border: 1px solid rgba(255, 0, 0, 0.5) !important;
 }
+
 input.ng-valid.ng-touched {
   border: 1px solid rgba(34, 164, 10, 0.77) !important;
 }

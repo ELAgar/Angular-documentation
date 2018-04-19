@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,6 @@ import {NgForm} from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   headerText = 'Работа с формами.';
-
-  @ViewChild('form') form: NgForm;   // Есть такой вариант
 
   answers = [{
     type: 'yes',
@@ -18,38 +16,23 @@ export class AppComponent implements OnInit {
     text: 'нет'
   }];
 
-  defaultAnswer = 'no';
-  defaultCountry = 'ua';
-  formData = [];
-  isSubmitted = false;
+  form: FormGroup;
 
-  constructor() {}
 
-  ngOnInit() {
+  constructor() {
   }
 
-  addRandEmail() {
-    const randEmail = 'mejibuh@gmail.com';
-    // this.form.setValue({ // setValue() требует задания значений всем полям
-    //   user: {
-    //     password: '',
-    //     email: randEmail
-    //   },
-    //   country: '',
-    //   answer: ''
-    // });
-    this.form.form.patchValue({ // patchValue() не требует задания значений всем полям
-      user: {
-        email: randEmail
-      }
+  ngOnInit() {
+    this.form = new FormGroup({
+      email: new FormControl(''),
+      password: new FormControl(''),
+      country: new FormControl('ua'),
+      answer: new FormControl('yes')
     });
   }
 
-  submitForm() {
-    // console.log(this.form.value);
-    this.isSubmitted = true;
-    this.formData.push(this.form.value);
-    this.form.reset();
+  onSubmit() {
+    console.log('Submitted!', this.form);
   }
 
 }
