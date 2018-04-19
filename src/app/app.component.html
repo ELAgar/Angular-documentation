@@ -8,7 +8,7 @@
   <form
     id="form"
     #form="ngForm"
-    (ngSubmit)="submitForm(form)"
+    (ngSubmit)="submitForm()"
   >
     <div ngModelGroup="user" #user="ngModelGroup">
       <div class="form-group">
@@ -23,6 +23,7 @@
           #email="ngModel"
         >
         <p class="error-text" *ngIf="email.invalid && email.touched">Введите корректный e-mail</p>
+        <button class="btn" type="button" (click)="addRandEmail()">Добавить случайный e-mail</button>
       </div>
       <div class="form-group">
         <input
@@ -78,4 +79,13 @@
     </div>
 
   </form>
+
+  <div style="margin: 0 auto; width: 500px;" *ngIf="isSubmitted">
+    <div style="margin-bottom: 20px;" *ngFor="let formItem of formData">
+      <p><b>Ваш Email</b> - {{ formItem.user.email }}</p>
+      <p><b>Ваш пароль</b> - {{ formItem.user.password }}</p>
+      <p><b>Выбранная страна</b> - {{ formItem.country | uppercase }}</p>
+      <p><b>Ваш ответ</b> - {{ formItem.answer | uppercase }}</p>
+    </div>
+  </div>
 </div>
