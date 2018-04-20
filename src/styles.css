@@ -78,3 +78,8 @@ hr {
   display: inline-block;
   padding: 1px 7px;
 }
+
+.form-control {
+  padding: 5px;
+  width: 100%;
+}
