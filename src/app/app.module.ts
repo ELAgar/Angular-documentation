@@ -12,6 +12,7 @@ import {AppComponent} from './app.component';
 
 
 // Services
+import {CarsService} from './cars.service';
 
 
 // Pipes
@@ -26,7 +27,7 @@ import {AppComponent} from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
