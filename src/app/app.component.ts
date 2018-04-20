@@ -18,7 +18,9 @@ export class AppComponent implements OnInit {
   carName = '';
   colors = [
     'red', 'blue', 'green',
-    'pink', 'yellow', 'grey'
+    'pink', 'yellow', 'grey',
+    'pink', 'yellowgreen', 'purple',
+    'lightgreen', 'orange', 'skyblue'
   ];
 
   constructor(private carsService: CarsService) {
@@ -50,6 +52,14 @@ export class AppComponent implements OnInit {
     this.carsService.changeColor(car, this.getRandColor())
       .subscribe((data) => {
         console.log(data);
+      });
+  }
+
+  deleteCar(car: Cars) {
+    this.carsService.deleteCar(car)
+      .subscribe(() => {
+        this.cars = this.cars.filter(c => c.id !== car.id);
+        // если c.id !== car.id(**айди машины которую мы сейчас удаляем**), то занести его в объект
       });
   }
 

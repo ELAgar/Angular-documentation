@@ -28,4 +28,9 @@ export class CarsService {
     // можно было написать в body просто {color} ибо значение и свойство совпадают, ES6 понял бы
   }
 
+  deleteCar(car: any) {
+    return this.http.delete(`http://localhost:3000/cars/${car.id}`)
+      .map((response: Response) => response.json());
+  }
+
 }

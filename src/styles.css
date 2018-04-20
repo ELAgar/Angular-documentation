@@ -51,6 +51,16 @@ hr {
   border: 1px solid green;
 }
 
+.btn.btn-danger {
+  background: rgba(207, 5, 0, 0.5);
+  border: 1px solid #c50000;
+}
+
+.btn.btn-main {
+  background: rgba(1, 0, 207, 0.5);
+  border: 1px solid #00009e;
+}
+
 
 .list-group {
   width: 100%;
