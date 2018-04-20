@@ -21,4 +21,11 @@ export class CarsService {
       .map((response: Response) => response.json());
   }
 
+  changeColor(car: any, color: string) {
+    car.color = color;
+    return this.http.put(`http://localhost:3000/cars/${car.id}`, car)
+      .map((response: Response) => response.json());
+    // можно было написать в body просто {color} ибо значение и свойство совпадают, ES6 понял бы
+  }
+
 }
