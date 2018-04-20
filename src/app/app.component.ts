@@ -6,7 +6,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   headerText = 'Работа с HTTP запросами.';
-
+  // =======================================
+  cars = [];
 
   constructor() {
   }
