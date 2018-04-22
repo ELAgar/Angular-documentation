@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class CarsService {
@@ -15,7 +16,10 @@ export class CarsService {
     return this.http.get('http://localhost:3000/cars', {
       headers: headers
     })
-      .map((response: Response) => response.json());
+      .map((response: Response) => response.json())
+      .catch((err: Response) => {
+        return Observable.throw('Сервер недоступен, попробуйте позже!');
+      });
   }
 
 

@@ -33,7 +33,10 @@ export class AppComponent implements OnInit {
   loadCars() {
     this.carsService
       .getCars()
-      .subscribe((cars: Cars[]) => this.cars = cars);
+      .subscribe(
+        (cars: Cars[]) => { this.cars = cars; },
+        (err) => { alert(err); }
+      );
   }
 
   // POST
