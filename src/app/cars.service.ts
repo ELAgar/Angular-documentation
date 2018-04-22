@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {Headers, Http, Response} from '@angular/http';
 
 @Injectable()
 export class CarsService {
@@ -7,11 +7,19 @@ export class CarsService {
   constructor(private http: Http) {
   }
 
+  // GET
   getCars() {
-    return this.http.get('http://localhost:3000/cars')
+    const headers = new Headers({
+      'Content-Type': 'application/json; charset=utf8'
+    });
+    return this.http.get('http://localhost:3000/cars', {
+      headers: headers
+    })
       .map((response: Response) => response.json());
   }
 
+
+  // POST
   addCar(carName: string) {
     const data = {
       name: carName,
@@ -21,13 +29,16 @@ export class CarsService {
       .map((response: Response) => response.json());
   }
 
+
+  // PUT
   changeColor(car: any, color: string) {
     car.color = color;
     return this.http.put(`http://localhost:3000/cars/${car.id}`, car)
       .map((response: Response) => response.json());
-    // можно было написать в body просто {color} ибо значение и свойство совпадают, ES6 понял бы
   }
 
+
+  // DELETE
   deleteCar(car: any) {
     return this.http.delete(`http://localhost:3000/cars/${car.id}`)
       .map((response: Response) => response.json());

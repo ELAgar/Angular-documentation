@@ -29,12 +29,14 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  // GET
   loadCars() {
     this.carsService
       .getCars()
       .subscribe((cars: Cars[]) => this.cars = cars);
   }
 
+  // POST
   addCar() {
     this.carsService.addCar(this.carName)
       .subscribe((car: Cars) => {
@@ -43,18 +45,18 @@ export class AppComponent implements OnInit {
     this.carName = '';
   }
 
+  // PUT
+  setNewColor(car: Cars) {
+    this.carsService.changeColor(car, this.getRandColor())
+      .subscribe((data) => console.log(data));
+  }
+
   getRandColor() {
     const randNumber = Math.round(1 + Math.random() * (this.colors.length - 1));
     return this.colors[randNumber];
   }
 
-  setNewColor(car: Cars) {
-    this.carsService.changeColor(car, this.getRandColor())
-      .subscribe((data) => {
-        console.log(data);
-      });
-  }
-
+  // DELETE
   deleteCar(car: Cars) {
     this.carsService.deleteCar(car)
       .subscribe(() => {

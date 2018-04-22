@@ -26,6 +26,14 @@ hr {
   padding: 0 15px;
 }
 
+
+.car-name {
+  min-width: 90px;
+  display: inline-block;
+  text-align: center;
+}
+
+
 .btn {
   position: relative;
   border: 1px solid #d5d5d5;
