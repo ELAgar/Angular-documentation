@@ -27,13 +27,6 @@ hr {
 }
 
 
-.car-name {
-  min-width: 90px;
-  display: inline-block;
-  text-align: center;
-}
-
-
 .btn {
   position: relative;
   border: 1px solid #d5d5d5;
@@ -70,34 +63,24 @@ hr {
 }
 
 
-.list-group {
-  width: 100%;
-  margin: 0 auto;
+.main-nav {
+  margin-bottom: 20px;
+  background: #f2f2f2;
 }
+
+.list-group {}
 
 .list-group-item {
-  display: block;
-  margin-bottom: 10px;
-  border: 1px solid silver;
-  padding: 10px;
-  border-radius: 5px;
-  position: relative;
-  background: #ffffff;
-}
-
-.number {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background: #666;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
   display: inline-block;
-  padding: 1px 7px;
 }
 
-.form-control {
-  padding: 5px;
-  width: 100%;
+.list-group-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 15px;
+}
+.list-group-item:hover a,
+.list-group-item.active a {
+  background: #e6e6e6;
 }

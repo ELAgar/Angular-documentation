@@ -4,20 +4,16 @@
   </h2>
   <hr>
 
-  <input type="text" class="form-control" placeholder="Name of car" [(ngModel)]="carName">
-  <hr>
-  <button class="btn btn-main" (click)="loadCars()">Загрузить машины</button>
-  <button class="btn btn-success" (click)="addCar()">Добавить машину</button>
-  <hr>
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let car of cars | async">
-      <span class="number" [ngStyle]="{background: car.color}">
-        {{ car.id }}
-      </span>
-      <span class="car-name">{{ car.name }}</span>
-      <button class="btn btn-success" (click)="setNewColor(car)">Изменить цвет</button>
-      <button class="btn btn-danger" (click)="deleteCar(car)">Удалить</button>
-    </li>
-  </ul>
+  <nav class="main-nav">
+    <ul class="list-group">
+      <li class="list-group-item active"><a href="#">Главная</a></li>
+      <li class="list-group-item"><a href="#">Машины</a></li>
+    </ul>
+  </nav>
+
+  <div>
+    <app-home-page></app-home-page>
+    <app-cars-page></app-cars-page>
+  </div>
 
 </div>

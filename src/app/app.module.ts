@@ -13,6 +13,8 @@ import {AppComponent} from './app.component';
 
 // Services
 import {CarsService} from './cars.service';
+import { CarsPageComponent } from './cars-page/cars-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 // Pipes
@@ -20,7 +22,9 @@ import {CarsService} from './cars.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarsPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
