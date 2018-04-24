@@ -1,26 +1,6 @@
 <div class="wr">
-  <h2 style="margin-top: 15px; text-align: center;">
-    {{ appTitle | async }}
-  </h2>
+  <app-header></app-header>
   <hr>
-
-  <nav class="main-nav">
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}"
-      >
-        <a routerLink="/">Главная</a>
-      </li><!--
-      --><li
-        class="list-group-item"
-        routerLinkActive="active"
-      >
-        <a routerLink="/cars">Машины</a>
-      </li>
-    </ul>
-  </nav>
 
   <div>
     <router-outlet></router-outlet>

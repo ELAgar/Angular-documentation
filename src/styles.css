@@ -84,3 +84,18 @@ hr {
 .list-group-item.active a {
   background: #e6e6e6;
 }
+
+.list-item a {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid silver;
+  background: white;
+  color: grey;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+.list-item a:hover {
+  background: #f2f2f2;
+  color: #333;
+}

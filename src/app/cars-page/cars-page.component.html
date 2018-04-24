@@ -1,10 +1,10 @@
-<h2>Страница машин</h2>
+<h2 appColor>Страница машин</h2>
 <hr>
 
 <div class="wr">
-  <div style="width: 35%; float: left;">
+  <div style="width: 35%; float: left; padding: 20px;">
     <ul>
-      <li *ngFor="let car of cars">
+      <li class="list-item" *ngFor="let car of cars">
         <a
           [routerLink]="['/cars', car.id, car.name]"
           [queryParams]="{year: car.year, color: car.color}"
@@ -15,7 +15,7 @@
       </li>
     </ul>
   </div>
-  <div style="width: 65%; float: left;">
+  <div style="width: 65%; float: left; padding: 20px;">
     <router-outlet></router-outlet>
   </div>
 </div>
