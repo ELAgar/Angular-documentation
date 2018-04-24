@@ -1,13 +1,21 @@
 <h2>Страница машин</h2>
 <hr>
-<ul>
-  <li *ngFor="let car of cars">
-    <a
-      [routerLink]="['/cars', car.id, car.name]"
-      [queryParams]="{year: car.year, color: car.color}"
-      fragment="pic"
-    >
-      {{ car.name }}
-    </a>
-  </li>
-</ul>
+
+<div class="wr">
+  <div style="width: 35%; float: left;">
+    <ul>
+      <li *ngFor="let car of cars">
+        <a
+          [routerLink]="['/cars', car.id, car.name]"
+          [queryParams]="{year: car.year, color: car.color}"
+          fragment="pic"
+        >
+          {{ car.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div style="width: 65%; float: left;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
