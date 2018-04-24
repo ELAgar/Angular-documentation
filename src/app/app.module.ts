@@ -16,6 +16,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 
 // Services
 import {CarsService} from './cars.service';
+import { CarPageComponent } from './car-page/car-page.component';
 
 
 // Pipes
@@ -25,7 +26,8 @@ import {CarsService} from './cars.service';
   declarations: [
     AppComponent,
     CarsPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    CarPageComponent
   ],
   imports: [
     BrowserModule,

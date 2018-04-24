@@ -2,7 +2,6 @@
 <hr>
 <ul>
   <li *ngFor="let car of cars">
-    <span>{{ car.id }} - </span>
-    <span>Name: {{ car.name }}</span>
+    <a [routerLink]="['/cars', car.id, car.name]">{{ car.name }}</a>
   </li>
 </ul>
