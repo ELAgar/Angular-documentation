@@ -17,6 +17,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 // Services
 import {CarsService} from './cars.service';
 import { CarPageComponent } from './car-page/car-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 // Pipes
@@ -27,7 +28,8 @@ import { CarPageComponent } from './car-page/car-page.component';
     AppComponent,
     CarsPageComponent,
     HomePageComponent,
-    CarPageComponent
+    CarPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
