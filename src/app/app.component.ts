@@ -6,13 +6,11 @@ import {CarsService} from './cars.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  appTitle;
 
-  constructor(private carsService: CarsService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.appTitle = this.carsService.getAppTitle();
   }
 
 }

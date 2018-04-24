@@ -2,8 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {AppRoutingModule} from './app-routing.module';;
-import {CarsModule} from './cars-page/cars.module';
+import {AppRoutingModule} from './app-routing.module';
 
 
 // Components
@@ -33,7 +32,6 @@ import {SharedModule} from './shared/shared.module';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    CarsModule,
     SharedModule
   ],
   providers: [],
