@@ -14,7 +14,8 @@ interface Cars {
 export class AppComponent implements OnInit {
   headerText = 'Работа с HTTP запросами.';
   // =======================================
-  cars: Cars[] = [];
+  // cars: Cars[] = [];
+  cars: any;
   carName = '';
   colors = [
     'red', 'blue', 'green',
@@ -22,21 +23,23 @@ export class AppComponent implements OnInit {
     'pink', 'yellowgreen', 'purple',
     'lightgreen', 'orange', 'skyblue'
   ];
+  appTitle;
 
   constructor(private carsService: CarsService) {
   }
 
   ngOnInit() {
+    this.appTitle = this.carsService.getAppTitle();
   }
 
   // GET
   loadCars() {
-    this.carsService
-      .getCars()
-      .subscribe(
-        (cars: Cars[]) => { this.cars = cars; },
-        (err) => { alert(err); }
-      );
+    this.cars = this.carsService
+      .getCars();
+      // .subscribe(
+      //   (cars: Cars[]) => { this.cars = cars; },
+      //   (err) => { alert(err); }
+      // );
   }
 
   // POST

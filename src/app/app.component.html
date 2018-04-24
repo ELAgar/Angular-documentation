@@ -1,6 +1,6 @@
 <div class="wr">
   <h2 style="margin-top: 15px; text-align: center;">
-    {{ headerText }}
+    {{ appTitle | async }}
   </h2>
   <hr>
 
@@ -10,7 +10,7 @@
   <button class="btn btn-success" (click)="addCar()">Добавить машину</button>
   <hr>
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let car of cars">
+    <li class="list-group-item" *ngFor="let car of cars | async">
       <span class="number" [ngStyle]="{background: car.color}">
         {{ car.id }}
       </span>
