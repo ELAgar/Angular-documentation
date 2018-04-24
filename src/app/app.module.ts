@@ -10,10 +10,10 @@ import {CarsModule} from './cars-page/cars.module';
 import {AppComponent} from './app.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {HeaderComponent} from './header/header.component';
+import {SharedModule} from './shared/shared.module';
 
 
 // Directives
-import {ColorDirective} from './shared/color.directive'
 
 
 // Services
@@ -26,7 +26,6 @@ import {ColorDirective} from './shared/color.directive'
   declarations: [
     AppComponent,
     HomePageComponent,
-    ColorDirective,
     HeaderComponent
   ],
   imports: [
@@ -34,7 +33,8 @@ import {ColorDirective} from './shared/color.directive'
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    CarsModule
+    CarsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
