@@ -1,15 +1,12 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {AppRoutingModule} from './app-routing.module';
 
 
 // Components
 import {AppComponent} from './app.component';
-import {HomePageComponent} from './home-page/home-page.component';
-import {HeaderComponent} from './header/header.component';
-import {SharedModule} from './shared/shared.module';
+import {CarComponent} from './car/car.component';
 
 
 // Directives
@@ -24,15 +21,12 @@ import {SharedModule} from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    HeaderComponent
+    CarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpModule,
-    SharedModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
