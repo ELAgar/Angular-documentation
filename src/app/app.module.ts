@@ -10,6 +10,7 @@ import {CarComponent} from './car/car.component';
 
 
 // Directives
+import {ColorDirective} from './color/color.directive';
 
 
 // Services
@@ -21,7 +22,8 @@ import {CarComponent} from './car/car.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CarComponent
+    CarComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
