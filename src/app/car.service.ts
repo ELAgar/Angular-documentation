@@ -1,10 +1,13 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 @Injectable()
 export class CarService {
   private isVisible = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   showCar() {
     this.isVisible = true;
@@ -16,6 +19,10 @@ export class CarService {
 
   getVisibility() {
     return this.isVisible;
+  }
+
+  getCarName(): Observable<string> {
+    return Observable.of('Ford').delay(100);
   }
 
 }

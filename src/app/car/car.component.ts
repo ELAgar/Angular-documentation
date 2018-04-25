@@ -10,12 +10,15 @@ import {CarService} from '../car.service';
 export class CarComponent implements OnInit {
   isCarVisible: boolean;
   title = 'My car header';
+  carName: string;
 
   constructor(private service: CarService) {
   }
 
   ngOnInit() {
     this.isCarVisible = this.service.getVisibility();
+    this.service.getCarName()
+      .subscribe(carName => this.carName = carName);
   }
 
 }
