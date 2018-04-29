@@ -1,6 +1,16 @@
 <h1>{{ title }}</h1>
+
+<!--<h1>{{ title }}</h1>-->
+<!--<div-->
+  <!--(mousedown)="clickedDivState = 'active'"-->
+  <!--[@clickedDiv]="clickedDivState"-->
+  <!--(click)="changeDivState()"-->
+<!--&gt;-->
+<!--</div>-->
+
 <div
-  [@clickedDiv]="clickedDivState"
-  (click)="changeDivState()"
+  (click)="multiState = multiState === 'start' ? 'end' : 'start'"
+  [@multi]="multiState"
 >
+
 </div>
