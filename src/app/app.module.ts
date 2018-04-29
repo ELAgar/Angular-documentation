@@ -6,11 +6,10 @@ import {HttpModule} from '@angular/http';
 
 // Components
 import {AppComponent} from './app.component';
-import {CarComponent} from './car/car.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 // Directives
-import {ColorDirective} from './color/color.directive';
 
 
 // Services
@@ -21,14 +20,13 @@ import {ColorDirective} from './color/color.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CarComponent,
-    ColorDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
