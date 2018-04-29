@@ -1,16 +1,12 @@
-<h1>{{ title }}</h1>
-
-<!--<h1>{{ title }}</h1>-->
-<!--<div-->
-  <!--(mousedown)="clickedDivState = 'active'"-->
-  <!--[@clickedDiv]="clickedDivState"-->
-  <!--(click)="changeDivState()"-->
-<!--&gt;-->
-<!--</div>-->
-
-<div
-  (click)="multiState = multiState === 'start' ? 'end' : 'start'"
-  [@multi]="multiState"
->
-
+<div class="wr">
+  <h1>{{ title }}</h1>
+  <hr>
+  <button class="btn btn-main" (click)="isVisible = !isVisible">Переключить</button>
+  <div
+    [@divTrigger]="'show'"
+    class="error-text"
+    *ngIf="isVisible"
+  >
+    Lorem ipsum dolor sit amet.
+  </div>
 </div>

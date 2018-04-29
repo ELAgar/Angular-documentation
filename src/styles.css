@@ -19,11 +19,18 @@ hr {
 }
 
 .wr {
-  max-width: 600px;
+  max-width: 1170px;
   min-width: 320px;
   position: relative;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.error-text {
+  background: rgba(255, 0, 0, 0.51);
+  padding: 10px;
+  border: 1px solid #c70000;
+  color: #c70000;
 }
 
 
