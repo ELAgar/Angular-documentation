@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AnimationEvent} from '@angular/animations';
 import {
   // changeWidthTrigger,
   divTrigger
@@ -21,6 +22,13 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  onAnimationStart(e: AnimationEvent) {
+    console.log('Start: ', e);
+  }
+
+  onAnimationDone(e: AnimationEvent) {
+    console.log('Done: ', e);
   }
 
 }

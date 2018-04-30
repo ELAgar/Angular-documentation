@@ -6,15 +6,18 @@
   <button
     class="btn btn-main"
     (click)="isVisible = !isVisible"
-  >Переключить</button>
+  >Переключить
+  </button>
+
   <div
     @divTrigger
+    (@divTrigger.start)="onAnimationStart($event)"
+    (@divTrigger.done)="onAnimationDone($event)"
     class="error-text"
     *ngIf="isVisible"
   >
     Lorem ipsum dolor sit amet.
   </div>
-
 
 
 </div>
