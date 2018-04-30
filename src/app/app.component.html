@@ -1,12 +1,24 @@
 <div class="wr">
   <h1>{{ title }}</h1>
   <hr>
-  <button class="btn btn-main" (click)="isVisible = !isVisible">Переключить</button>
+  <button
+    class="btn btn-main"
+    (click)="isVisible = !isVisible"
+  >Переключить</button>
+  <!--<div-->
+    <!--@divTrigger-->
+    <!--class="error-text"-->
+    <!--*ngIf="isVisible"-->
+  <!--&gt;-->
+    <!--Lorem ipsum dolor sit amet.-->
+  <!--</div>-->
+</div>
+<hr>
+<div class="wr">
   <div
-    [@divTrigger]="'show'"
-    class="error-text"
-    *ngIf="isVisible"
+    [@changeWidth]="isVisible ? 'a' : 'b'"
+    style="height: 50px; width: 200px; background: red"
   >
-    Lorem ipsum dolor sit amet.
+
   </div>
 </div>
